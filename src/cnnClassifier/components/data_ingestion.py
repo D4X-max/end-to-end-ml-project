@@ -16,9 +16,9 @@ class DataIngestion:
                 url = self.config.source_url,
                 filename=self.config.local_data_file
             )
-            logger.info(f"Downloaded file: {filename} of size: {get_size(filename)}")
+            logger.info(f"Downloaded file: {filename}")
         else:
-            logger.info(f"File already exists: {self.config.local_data_file} of size: {get_size(self.config.local_data_file)}")
+            logger.info(f"File already exists: {self.config.local_data_file}")
             
     def extract_zip_file(self):
         unzip_path = self.config.unzip_dir
